@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="todolist.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Lato|Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Chewy|Lato|Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>To Do List</title>
+</head>
+
+<body style="background-color: rgb(250, 250, 250);">
+
+    <div id="todolistname" style="display: flex; justify-content:center;">
+        <img src="checklist.png" alt="checklist" style="width:100px; height: 100px; ">
+        <p>TO DO LIST</p>
+    </div>
+
+    <div id="AddTask" >
+        <div style="display: flex; justify-content:center; width: 100%;">
+            <input type="text" id="inputtask"><button id="addbtn" onclick="add_task()">ADD</button>
+        </div>
+    </div>
+
+
+
+    <div id="Tasks">
+        <div id="a">
+            <div id="todotasks" class="childtask">
+                <p>TASKS TO DO &#127919</p>
+                <div id="orderbtn">
+                    <button onclick="reorder()" id="reorderbtn"> Re order</button>
+                    <button onclick="setorder()" id="setorderbtn" style="display:none;">set order</button>
+                </div>
+                <div id="taskscontent">
+                </div>
+            </div>
+        </div>
+
+        <div id="a">
+            <div id="completedtasks" class="childtask">
+                <p>TASKS COMPLETED &#9989</p>
+            </div>
+        </div>
+    </div>
+    
+        <img src="dustbin.png" id="dustbin" class="dropbin" alt="Dustbin" style="width:130px; height:122px;" >
+
+    <div id="blackcurtain"></div>
+    
+   
+</body>
+
+<script src="todolist.js" ></script>
+
+</html>
+
+
+

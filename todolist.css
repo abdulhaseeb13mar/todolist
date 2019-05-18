@@ -1,0 +1,193 @@
+.draggable {
+  width: 95%;
+  text-align: center;
+  background: rgb(250, 250, 250);
+  margin: auto;
+  border-radius: 5px;
+  line-height: 30px;
+  border: none;
+  font-size: 20px;
+  height: auto;
+  margin: 11px auto 14px auto;
+  padding: 10px 0 10px 0;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.212);
+  font-family: 'Baloo Bhai', cursive;
+}
+
+.draggable:hover{
+  cursor: grab;
+}
+
+.dropzone {
+  width: 540px;
+  height: 110px;
+  background-color: transparent;
+  margin: 18px auto 0px auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  border-style: dashed;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+
+
+div {
+  /* border: 1px solid black; */
+}
+
+#todolistname{
+  margin: auto;
+  width: 20%;
+  text-align: center;
+  font-family: 'Chewy', cursive;
+  font-size: 44px;
+}
+
+#inputtask{
+    width: 100%;
+    height: 45px;
+    color: black;
+    font-size: 15px;
+    border-radius: 12px;
+    font-family: 'Righteous', cursive;
+    border: 2px black solid;
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+#AddTask{
+  margin: 1% 1% 1% 27%;
+  width: 44%;
+  padding: 5px 5px 5px 5px;
+}
+
+#AddTask div{
+  margin: auto;
+  width: 46%;
+  height: auto;
+  padding: 5px 5px 5px 5px;
+}
+#addbtn{
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-family: 'Righteous', cursive;
+  font-size: 22px;
+  cursor: pointer;
+  transition: ease-in 0.1s;
+
+}
+
+#addbtn:hover{
+  background-color: rgb(8, 192, 8);
+  color: white;
+  border: 2px solid rgb(8, 192, 8);
+}
+
+#Tasks{
+  display: flex;
+  justify-content: center;
+  height: auto;
+  padding: 3px;
+}
+
+#a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.212),0 17px 50px 0 rgba(0, 0, 0, 0.212);
+  border: none;
+    
+}
+
+.childtask{
+  /* margin: 10px 20px 10px 10px; */
+  width: 77%;
+  text-align: center;
+  
+}
+
+#a:first-child{
+  margin: 1px 30px 1px 30px;
+  z-index: 1001;  
+}
+#a:last-child{
+  margin: 1px 30px 1px 30px;
+}
+
+#taskscontent{
+  border: none;
+}
+
+#orderbtn{
+  text-align: right;
+  border: none;
+}
+
+#orderbtn button{
+  color: white;
+  background-color: black;
+  padding: 5px,5px,5px,5px;
+  border: 2px solid black;
+  border-radius: 3px;
+  transition: 0.5s;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  
+}
+
+#orderbtn button:hover{
+  /* background-color: #ffffff; */
+  cursor: pointer;
+  border: 2px solid black;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.61);
+}
+
+#a p{
+  font-family: 'Righteous', cursive;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@keyframes animationDropCenter {
+	0% {
+		top:100%;
+  }
+  50%{
+    top: 79%;
+  }
+}
+
+#dustbin{
+  display: none;
+  position: fixed;
+  top: 81%;
+  left: 45%;
+  animation: animationDropCenter 0.5s;
+  z-index: 1002;
+}
+
+#dustbin img:hover{
+}
+
+#blackcurtain{
+  position: fixed; 
+	top: 0%; 
+	left: 0%; 
+	width: 100%; 
+	height: 100%; 
+	background:#000; 
+	opacity: .80; 
+	filter: alpha(opacity=30);
+	z-index: 1000; 
+  animation: animateBackground 0.6s ;
+  display: none;
+}
+@keyframes animateBackground {
+	from {opacity: 0.3;}
+	to {opacity: 0.80;}
+}
