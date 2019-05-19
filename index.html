@@ -10,25 +10,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Lato|Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Chewy|Lato|Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Chewy|Lato|Luckiest+Guy&display=swap"
+        rel="stylesheet">
     <title>To Do List</title>
 </head>
 
 <body style="background-color: rgb(250, 250, 250);">
-
     <div id="todolistname" style="display: flex; justify-content:center;">
         <img src="checklist.png" alt="checklist" style="width:100px; height: 100px; ">
         <p>TO DO LIST</p>
     </div>
-
-    <div id="AddTask" >
-        <div style="display: flex; justify-content:center; width: 100%;">
-            <input type="text" id="inputtask"><button id="addbtn" onclick="add_task()">ADD</button>
+    <div id="AddTask">
+        <div id="inputtaskdiv" style="display: flex; justify-content:center; width: 100%;">
+            <input type="text" id="inputtask" placeholder="Add your task here...">
+            <button id="addbtn" class="add_edit_btns" onclick="add_task()">ADD</button>
+            <button id="editbtn" class="add_edit_btns" style="display:none;" onclick="edit_task()">Save Edit</button>
         </div>
     </div>
-
-
-
     <div id="Tasks">
         <div id="a">
             <div id="todotasks" class="childtask">
@@ -37,28 +35,21 @@
                     <button onclick="reorder()" id="reorderbtn"> Re order</button>
                     <button onclick="setorder()" id="setorderbtn" style="display:none;">set order</button>
                 </div>
-                <div id="taskscontent">
-                </div>
+                <div id="taskscontent"></div>
             </div>
         </div>
-
         <div id="a">
             <div id="completedtasks" class="childtask">
                 <p>TASKS COMPLETED &#9989</p>
             </div>
         </div>
     </div>
-    
-        <img src="dustbin.png" id="dustbin" class="dropbin" alt="Dustbin" style="width:130px; height:122px;" >
-
+    <div id="tooldiv">
+        <img src="dustbin.png" id="dustbin" class="dropbin" alt="Dustbin" style="width:130px; height:122px;">
+        <img src="editblack.png" id="editid" class="editclass" alt="edit" style="width:117px; height:109px;">
+    </div>
     <div id="blackcurtain"></div>
-    
-   
 </body>
-
-<script src="todolist.js" ></script>
+<script src="todolist.js"></script>
 
 </html>
-
-
-
